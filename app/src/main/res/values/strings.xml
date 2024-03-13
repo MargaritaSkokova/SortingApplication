@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SortingApplication</string>
+    <string name="welcome_text">Добро пожаловать, что бы Вы хотели сделать с массивом?</string>
+    <string name="sort_button">Отсортировать</string>
+    <string name="shift_button">Сдвинуть циклически</string>
+    <string name="extra_button">NOT STATED</string>
+    <string name="input">Введите массив:</string>
+    <string name="hint">1 2 3 4…</string>
+    <string name="next">Далее</string>
+    <string name="dec">По убыванию</string>
+    <string name="asc">По возрастанию</string>
+    <string name="sort_text">Ваш отсортированный массив:</string>
+    <string name="input_shift_size">Введите число на которое нужно сдвинуть:</string>
+    <string name="shift_hint">больше 0 - вправо, меньше - влево</string>
+    <string name="shift_text">Ваш массив с циклическим сдвигом:</string>
+</resources>
