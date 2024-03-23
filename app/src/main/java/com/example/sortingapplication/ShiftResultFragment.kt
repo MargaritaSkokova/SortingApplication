@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.sortingapplication.databinding.FragmentShiftResultBinding
 import androidx.lifecycle.ViewModelProvider
+import com.example.sortingapplication.database.SortingApplicationRepository
+import java.util.UUID
 
 class ShiftResultFragment : Fragment() {override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,11 +24,21 @@ class ShiftResultFragment : Fragment() {override fun onCreate(savedInstanceState
     ): View? {
         _binding = FragmentShiftResultBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        val application = requireNotNull(this.activity).application
         viewModel = ViewModelProvider(this).get(ShiftResultViewModel::class.java)
 
         var numbers = ShiftResultFragmentArgs.fromBundle(requireArguments()).numbers
-        var shiftSize = ShiftResultFragmentArgs.fromBundle(requireArguments()).shiftSize
+
+        val db = SortingApplicationRepository.get();
+        val arrayBefore = numbers
+
+        val shiftSize = ShiftResultFragmentArgs.fromBundle(requireArguments()).shiftSize
         numbers = viewModel.makeShift(viewModel.stringToArray(numbers), shiftSize)
+
+        val arrayAfter = numbers
+        db.insertOperation(db.getTypeIdByName("Shift"), arrayBefore, arrayAfter);
+
         val shiftOutput = binding.shiftedArray
         shiftOutput.text = numbers
         return view

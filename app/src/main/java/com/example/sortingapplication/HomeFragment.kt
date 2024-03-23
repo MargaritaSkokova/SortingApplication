@@ -30,6 +30,9 @@ class HomeFragment : Fragment() {
         binding.shiftButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_homeFragment_to_shiftFragment)
         }
+        binding.dataButton.setOnClickListener {
+            view.findNavController().navigate(R.id.action_homeFragment_to_dataFragment)
+        }
         return view
     }
 

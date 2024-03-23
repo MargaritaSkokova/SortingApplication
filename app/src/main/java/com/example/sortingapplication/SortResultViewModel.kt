@@ -1,8 +1,10 @@
 package com.example.sortingapplication
 
 import androidx.lifecycle.ViewModel
+import com.example.sortingapplication.database.OperationTypeDao
+import com.example.sortingapplication.database.OperationsDao
 
-class SortResultViewModel: ViewModel() {
+class SortResultViewModel(): ViewModel() {
     fun sort(array: String, isAsc: Boolean) : String {
         var numbers = array
         var arrayNumbersTemp = numbers.split("\\s+".toRegex())

@@ -13,4 +13,6 @@
     <string name="input_shift_size">Введите число на которое нужно сдвинуть:</string>
     <string name="shift_hint">больше 0 - вправо, меньше - влево</string>
     <string name="shift_text">Ваш массив с циклическим сдвигом:</string>
+    <string name="data_button">Бывалые</string>
+    <string name="data_output_header">Ваши операции:</string>
 </resources>
