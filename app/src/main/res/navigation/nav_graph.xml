@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_shiftFragment"
             app:destination="@id/shiftFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dataFragment"
+            app:destination="@id/dataFragment" />
     </fragment>
     <fragment
         android:id="@+id/sortFragment"
@@ -61,4 +64,9 @@
             android:name="shift_size"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/dataFragment"
+        android:name="com.example.sortingapplication.DataFragment"
+        android:label="fragment_data"
+        tools:layout="@layout/fragment_data" />
 </navigation>

@@ -1,8 +1,11 @@
 package com.example.sortingapplication
 
 import androidx.lifecycle.ViewModel
+import com.example.sortingapplication.database.OperationTypeDao
+import com.example.sortingapplication.database.OperationsDao
+import com.example.sortingapplication.database.SortingApplicationRepository
 
-class ShiftResultViewModel: ViewModel() {
+class ShiftResultViewModel(): ViewModel() {
 
     fun stringToArray(numbers: String): List<String> {
         var arrayNumbers = numbers.split("\\s+".toRegex())
